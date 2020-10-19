@@ -12,12 +12,15 @@
     </div>
 </div>-->
 <div>
-    <img id="header" src="" alt="">
+    <img id="header" src="{% static 'vcard/img/header_big.PNG' %}" alt="">
+    <img id="header-small" src="{% static 'vcard/img/header.PNG' %}" alt="">
+    
 </div>
 <hr style="height:3px;width:75%;color:#d40005;background-color:#d40005">
 <div class="row vcard">
     <div class="col-xs-12 col-md-4">
-        <img id="portrait" src="" alt="">
+        <img id="portrait" src="{% static 'vcard/img/portrait_edited.PNG' %}" alt="">
+        <img id="portrait-small" src="{% static 'vcard/img/portrait_small.png' %}" alt="">
     </div>
     <div style="margin: auto;"  class="col-xs-12 col-md-8">
         {% for vcard in object_list%}
