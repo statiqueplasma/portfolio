@@ -26,7 +26,7 @@ SECRET_KEY = 'h@-(7+s1@ml9r+j04%3hdyi$o110cgay30+n8ejiwmyp9!qugs'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1', 'statiqueplasma.herokuapp.com']
 
 
 # Application definition
