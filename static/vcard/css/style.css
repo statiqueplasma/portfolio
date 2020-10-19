@@ -1,0 +1,80 @@
+body{
+    background: url("/static/vcard/img/bg.jpg") fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 2rem;
+}
+.vcard{
+    background-color: rgb(14, 14, 14, 0.45);  
+}
+.big-title h2{
+    color: #d40005;
+    text-align: center;
+    font-family: 'Krona One', sans-serif;
+    font-size: 5vw;
+    margin-bottom: 2rem;
+    border-bottom: none;}
+    @media (max-width:800px) {
+        .big-title h2{
+            color: #d40005;
+            text-align: center;
+            font-family: 'Krona One', sans-serif;
+            font-size: 8vw;
+            margin-top: 2rem;
+            text-decoration: #d40005 underline;
+            margin-bottom: 2rem;}
+    }
+
+.title h4{
+    color: #b30003;
+    text-align: center;
+    font-family: 'Krona One', sans-serif;}
+    
+    @media (min-width:800px){
+        .title h4{
+            color: #d40005;
+            text-align: end;
+            font-size: 2.2vw;
+            font-family: 'Krona One', sans-serif;}
+                    
+}
+.content h4{
+    color: aliceblue;
+    text-align: center;
+    }
+    @media (min-width:800px){
+        .content h4{
+            color: aliceblue;
+            font-size: 2.2vw;
+            text-align: start;}
+            
+}
+#portrait{
+    max-width: 60%;
+    content: url("/static/vcard/img/portrait_small.png");
+    border-bottom: #d40005 3px solid;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+    @media (min-width:800px){
+        #portrait{
+            max-width: 100%;
+            
+            content: url("/static/vcard/img/portrait_edited.png");
+            border-bottom: none;
+        }
+                    
+}
+#header{
+    width: 60%;
+    margin-bottom: 2rem;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;}
+    @media (max-width:800px){
+        #header{
+            width: 100%;
+            content: url("/static/vcard/img/header.png");
+        }
+    }

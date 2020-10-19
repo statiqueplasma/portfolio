@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content%}
+
+<!--<div class="row">
+    <div class="col-xs-12 col-md-8">
+        <img style="width: 90%; margin: auto;" src="{% static 'vcard/img/header.PNG' %}" alt="">
+    </div>
+
+    <div style="margin:auto;" class="col-xs-12 col-md-4 big-title">
+        <h2>V-Card</h2>
+    </div>
+</div>-->
+<div>
+    <img id="header" src="{% static 'vcard/img/header_big.PNG' %}" alt="">
+</div>
+<hr style="height:3px;width:75%;color:#d40005;background-color:#d40005">
+<div class="row vcard">
+    <div class="col-xs-12 col-md-4">
+        <img id="portrait" src="{% static 'vcard/img/portrait_edited.PNG' %}" alt="">
+    </div>
+    <div style="margin: auto;"  class="col-xs-12 col-md-8">
+        {% for vcard in object_list%}
+        <div class="row">
+            <div class="col-xs-12 col-md-12 big-title">
+                <h2>V-Card</h2>
+            </div>
+            <div class="col-xs-12 col-md-4 title">
+                <h4>First Name: </h4>
+            </div>
+            <div class="col-xs-12 col-md-8 content">
+                <h4>{{vcard.prenom}}</h4>
+            </div>
+            <div class="col-xs-12 col-md-4 title">
+                <h4>Last Name: </h4>
+            </div>
+            <div class="col-xs-12 col-md-8 content">
+                <h4>{{vcard.nom}}</h4>
+            </div>
+            <div class="col-xs-12 col-md-4 title">
+                <h4>E-mail: </h4>
+            </div>
+            <div class="col-xs-12 col-md-8 content">
+                <h4>{{vcard.email}}</h4>
+            </div>
+            <div class="col-xs-12 col-md-4 title">
+                <h4>Téléphone: </h4>
+            </div>
+            <div class="col-xs-12 col-md-8 content">
+                <h4>{{vcard.telephone}}</h4>
+            </div>
+            <div class="col-xs-12 col-md-4 title">
+                <h4>Details: </h4>
+            </div>
+            <div class="col-xs-12 col-md-8 content">
+                <h4>{{vcard.details}}</h4>
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+</div>
+<hr style="height:3px;width:75%;color:#d40005;background-color:#d40005">
+<div style="margin-top: 5rem;" class="row">
+    <div style="margin: auto;" class="col-xs-6">
+        <a style="font-size: 3vw; padding: 2rem;" href="#" class="btn btn-primary btn-lg" role="button" aria-pressed="true">Visite My Website</a>
+    </div>
+    <div style="margin: auto;" class="col-xs-6">
+        <a style="font-size: 3vw; padding: 2rem;" href="{% static 'vcard/statiqueplasma.vcf' %}" class="btn btn-primary btn-lg" role="button" aria-pressed="true">Download My V-Card</a>
+    </div>
+
+</div>
+{% endblock %}
