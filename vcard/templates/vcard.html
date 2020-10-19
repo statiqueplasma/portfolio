@@ -20,7 +20,7 @@
         <img id="portrait" src="{% static 'vcard/img/portrait_edited.PNG' %}" alt="">
     </div>
     <div style="margin: auto;"  class="col-xs-12 col-md-8">
-        <!--{% for vcard in object_list%}
+        {% for vcard in object_list%}
         <div class="row">
             <div class="col-xs-12 col-md-12 big-title">
                 <h2>V-Card</h2>
@@ -56,7 +56,7 @@
                 <h4>{{vcard.details}}</h4>
             </div>
         </div>
-        {% endfor %}-->
+        {% endfor %}
 
     </div>
 </div>
