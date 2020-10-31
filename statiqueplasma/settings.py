@@ -29,7 +29,7 @@ with open('secret_key.txt') as f:
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-
+DEBUG_PROPAGATE_EXCEPTIONS = True
 ALLOWED_HOSTS = ['127.0.0.1', 'statiqueplasma.herokuapp.com', 'statiqueplasma.com', 'www.statiqueplasma.com']
 
 
