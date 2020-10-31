@@ -28,7 +28,7 @@ with open('..\secret_key.txt') as f:
     SECRET_KEY = f.read().strip()
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'statiqueplasma.herokuapp.com', 'statiqueplasma.com', 'www.statiqueplasma.com']
 
@@ -111,8 +111,8 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-CSRF_COOKIE_SECURE = True
-SESSION_COOKIE_SECURE =True
+#CSRF_COOKIE_SECURE = True
+#SESSION_COOKIE_SECURE =True
 #SECURE_SSL_REDIRECT = True
 
 # Internationalization
