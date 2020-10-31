@@ -673,6 +673,10 @@ header{
     margin-right: auto;
     margin-bottom: 10vw;
 }
+@media(max-width:900px){
+    .services .section-title{
+        width: 80%;
+}
 .servicecard{
     margin-bottom: 5vw;
     height: 700px;
