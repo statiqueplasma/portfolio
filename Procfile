@@ -1,1 +1,1 @@
-web: gunicorn statiqueplasma.wsgi
+web: gunicorn statiqueplasma.wsgi:application --log-file - --log-level debug
