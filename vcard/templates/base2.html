@@ -100,7 +100,7 @@
                             <a href="#">Services<i class="fas fa-caret-down"></i></a>
                             <div class="dropdown">
                                 <ul>
-                                    {% for service in service_items %}
+                                    {% for service in service_menu %}
                                     <li class="dropdown-link" >
                                         <a href="{% url 'portfolio:services' service.id %}">{{service.name}}</a>
                                     </li>

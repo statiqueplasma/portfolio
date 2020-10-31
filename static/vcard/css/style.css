@@ -489,7 +489,7 @@ header{
     }
 
     .nav-link:hover .arrow{
-        background-color: #50a9d6;
+        background-color: #d40005;
     }
 
     .dropdown .dropdown .arrow{
@@ -599,6 +599,7 @@ header{
         background-repeat: no-repeat;
         background-attachment: fixed;
         height: 700px;
+        width: 100%;
         display: flex;
         align-items: center;
     }
@@ -622,7 +623,7 @@ header{
     text-align: start;
     text-align: center;
     font-family: 'Krona One', sans-serif;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 #portraitHome{
     width: 570px;
@@ -652,6 +653,11 @@ header{
     font-family: 'Krona One', sans-serif;
     font-size: 30px;
 }
+@media(max-width:900px){
+    .clarification .answere p{
+        font-size: 25px;
+    }
+}
 .services{
     padding-top: 5vw;
     padding-bottom: 5vw; 
@@ -675,12 +681,17 @@ header{
     box-shadow: 5px 5px #d4000485;
     margin-left: auto;
     margin-right: auto;
-    
+}
+@media(max-width:900px){
+    .servicecard{
+        width: 350px;
+        height: 675px;
+    }
 }
 .servicecard .textcontainer h3{
     color:aliceblue;
     font-family: 'Krona One', sans-serif;
-    font-size: 30px;
+    font-size: 4vw;
     border-bottom: 2px #d40005 solid;
     width: 70%;
     text-align: center;
@@ -690,7 +701,7 @@ header{
 .servicecard .textcontainer p{
     color:aliceblue;
     font-family: 'Krona One', sans-serif;
-    font-size: 18px;
+    font-size: 3vw;
     text-align: start;
     width: 85%;
 }
