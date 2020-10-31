@@ -676,6 +676,7 @@ header{
 @media(max-width:900px){
     .services .section-title{
         width: 80%;
+        font-size: 2rem;
 }
 .servicecard{
     margin-bottom: 5vw;
@@ -708,6 +709,16 @@ header{
     font-size: 3vw;
     text-align: start;
     width: 85%;
+}
+@media(max-width:900px){
+    .servicecard .textcontainer h3{
+        font-size:1.5rem
+    }
+    .servicecard .textcontainer p{
+        font-size:1.2rem
+
+    }
+
 }
 .servicecard .textcontainer{
     display: flex;
