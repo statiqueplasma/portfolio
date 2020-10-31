@@ -676,7 +676,7 @@ header{
 @media(max-width:900px){
     .services .section-title{
         width: 80%;
-        font-size: 2rem;
+        font-size: 2rem;}
 }
 .servicecard{
     margin-bottom: 5vw;
