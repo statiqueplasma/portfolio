@@ -6,10 +6,10 @@ class Services(models.Model):
     picture = models.ImageField(null=True, blank=True, upload_to="images/")
     snipet = models.TextField(default="")
     description =models.TextField(default="")
-    languages = models.ManyToManyField('Languages', through='LangCat',null=True, blank=True)
-    softwars = models.ManyToManyField('Softwars', through='SofCat', null=True, blank=True)
-    principles = models.ManyToManyField('Principles', through='PrinCat',null=True, blank=True)
-    certificats = models.ManyToManyField('Certificats', through='CertCat',null=True, blank=True)
+    languages = models.ManyToManyField('Languages', through='LangCat', blank=True)
+    softwars = models.ManyToManyField('Softwars', through='SofCat', blank=True)
+    principles = models.ManyToManyField('Principles', through='PrinCat', blank=True)
+    certificats = models.ManyToManyField('Certificats', through='CertCat', blank=True)
     def __str__(self):
         """String for representing the Model object."""
         return self.name

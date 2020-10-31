@@ -16,6 +16,8 @@ ul{
 a{
     text-decoration: none;
 }
+
+/*=============================== V-Card Page ===========================================================================*/
 .vcard{
     background-color: rgb(14, 14, 14, 0.45);  
 }
@@ -90,8 +92,12 @@ a{
             content: url("/static/vcard/img/header.png");
         }
     }
-
-
+#header:hover{
+    transform: scale(1.1);
+    transition: 0.6s;
+    cursor: pointer;
+}
+/*====================================== Loader =============================================================================*/
 .loader{
     height: 100%;
     width: 100%;
@@ -125,7 +131,9 @@ a{
         transform: scale(0.9);
     }
 }
-.navbar{
+
+/*================= Nav Bar ============================================================================================================*/
+/* .navbar{
     position: fixed;
     top: 0;
     left: 0;
@@ -138,190 +146,7 @@ a{
     padding: 10px 100px;    
     z-index: 10000;
     transition: 0.5s;
-}
-.navscroll{
-    position: fixed;
-    background-color: rgb(8, 8, 8);
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: 0.6;
-    border-bottom: rgb(128,128,128, 0.5) solid 0.25px;
-    box-shadow: 2px grey;
-    padding: 5px 50px;
-    z-index: 100000;
-    transition: 0.5s;
-}
-
-.navlogo{
-    position: relative;
-    width: 100%;
-    transition: 0.6s;
-}
-/* .navbar ul{
-    position: relative;
-    display: flex;
-    align-items: center;
-    margin-right: 100px;
-}
-.navbar ul li{
-    position: relative;
-    list-style: none;
-    margin: 0 40px;
-}
-.navbar ul li a{
-    text-decoration: none;
-    color: aliceblue;
-    font-size: 14px;
-    font-family: 'Krona One', sans-serif;
-    transition: 0.6s;
-}
-.navbar ul li a:hover{
-    color: #d12326;
-    font-size: 18px;
-    
-}
-.navbar ul li a:hover > .dropdown{
-    transform: translateY(0,0);
-    opacity: 1;
-    pointer-events: auto;
-}
-.navbar ul li a:active{
-    color: #d12326;
-    text-decoration: underline;
 } */
-.descript{
-    background: url("/static/portfolio/img/bg2.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 900px;
-}
-.hellocontainer{
-    padding: 5vw;
-}
-@media(max-width:1000px){
-    .descript{
-        background: url("/static/portfolio/img/portrait3.png");
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        height: 700px;
-        display: flex;
-        align-items: center;
-    }
-    #portraitHome{
-        display: none;
-        
-    }
-    .hello{
-        background-color:rgb(8, 8, 8, 0.6);
-        padding: 5vw;
-    }
-}
-.hello h3{
-    color: #d40005;
-    text-align: center;
-    font-family: 'Krona One', sans-serif;
-    margin-bottom: 25px;
-}
-.hello p{
-    color: aliceblue;
-    text-align: start;
-    text-align: center;
-    font-family: 'Krona One', sans-serif;
-    font-size: 2rem;
-}
-#portraitHome{
-    width: 570px;
-    margin-left: 15vw;
-}
-
-.clarification{
-    padding: 10vw 5vw;
-    background: url("/static/portfolio/img/bg3.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.clarification .question{
-    display: flex;
-    align-items: center;
-}
-.clarification .question h1{
-    color:aliceblue;
-    font-family: 'Krona One', sans-serif;
-    border-bottom: 2px #d40005 solid;
-    width: 80%;
-    padding-bottom: 25px;
-    margin-bottom: 10vw;
-}
-.clarification .answere p{
-    color:aliceblue;
-    font-family: 'Krona One', sans-serif;
-    font-size: 30px;
-}
-.services{
-    padding-top: 5vw;
-    padding-bottom: 5vw; 
-}
-.services .section-title{
-    color:aliceblue;
-    font-family: 'Krona One', sans-serif;
-    border-bottom: 2px #d40005 solid;
-    text-align: center;
-    width: 25rem;
-    padding-bottom: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 10vw;
-}
-.servicecard{
-    margin-bottom: 5vw;
-    height: 700px;
-    width: 400px;
-    background-color: #1e1e1e;
-    box-shadow: 5px 5px #d4000485;
-    margin-left: auto;
-    margin-right: auto;
-    
-}
-.servicecard .textcontainer h3{
-    color:aliceblue;
-    font-family: 'Krona One', sans-serif;
-    font-size: 30px;
-    border-bottom: 2px #d40005 solid;
-    width: 70%;
-    text-align: center;
-    padding-bottom: 5px;
-    margin-bottom: 20px;
-}
-.servicecard .textcontainer p{
-    color:aliceblue;
-    font-family: 'Krona One', sans-serif;
-    font-size: 18px;
-    text-align: start;
-    width: 85%;
-}
-.servicecard .textcontainer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.servicecard .imgcontainer img{
-    width: 100%;
-    margin-bottom: 1vw;
-}
-.servicecard .btn-servicecard{
-    position: relative;
-    padding: 15px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10px;
-}
-
-/*========nav bar youtube======================================================================================================*/
-
 .container{
     max-width: 90%;
     margin: 0 auto;
@@ -700,3 +525,190 @@ header{
         transform: translateY(15px);
     }
 }
+.navscroll{
+    position: fixed;
+    background-color: rgb(8, 8, 8);
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6;
+    border-bottom: rgb(128,128,128, 0.5) solid 0.25px;
+    box-shadow: 2px grey;
+    padding: 5px 50px;
+    z-index: 100000;
+    transition: 0.5s;
+}
+
+.navlogo{
+    position: relative;
+    width: 100%;
+    transition: 0.6s;
+}
+/* .navbar ul{
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-right: 100px;
+}
+.navbar ul li{
+    position: relative;
+    list-style: none;
+    margin: 0 40px;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 14px;
+    font-family: 'Krona One', sans-serif;
+    transition: 0.6s;
+}
+.navbar ul li a:hover{
+    color: #d12326;
+    font-size: 18px;
+    
+}
+.navbar ul li a:hover > .dropdown{
+    transform: translateY(0,0);
+    opacity: 1;
+    pointer-events: auto;
+}
+.navbar ul li a:active{
+    color: #d12326;
+    text-decoration: underline;
+} */
+
+
+
+
+/*============================ Home Page ====================================================================*/
+.descript{
+    background: url("/static/portfolio/img/bg2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 900px;
+}
+.hellocontainer{
+    padding: 5vw;
+}
+@media(max-width:1000px){
+    .descript{
+        background: url("/static/portfolio/img/portrait3.png");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        height: 700px;
+        display: flex;
+        align-items: center;
+    }
+    #portraitHome{
+        display: none;
+        
+    }
+    .hello{
+        background-color:rgb(8, 8, 8, 0.6);
+        padding: 5vw;
+    }
+}
+.hello h3{
+    color: #d40005;
+    text-align: center;
+    font-family: 'Krona One', sans-serif;
+    margin-bottom: 25px;
+}
+.hello p{
+    color: aliceblue;
+    text-align: start;
+    text-align: center;
+    font-family: 'Krona One', sans-serif;
+    font-size: 2rem;
+}
+#portraitHome{
+    width: 570px;
+    margin-left: 15vw;
+}
+
+.clarification{
+    padding: 10vw 5vw;
+    background: url("/static/portfolio/img/bg3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.clarification .question{
+    display: flex;
+    align-items: center;
+}
+.clarification .question h1{
+    color:aliceblue;
+    font-family: 'Krona One', sans-serif;
+    border-bottom: 2px #d40005 solid;
+    width: 80%;
+    padding-bottom: 25px;
+    margin-bottom: 10vw;
+}
+.clarification .answere p{
+    color:aliceblue;
+    font-family: 'Krona One', sans-serif;
+    font-size: 30px;
+}
+.services{
+    padding-top: 5vw;
+    padding-bottom: 5vw; 
+}
+.services .section-title{
+    color:aliceblue;
+    font-family: 'Krona One', sans-serif;
+    border-bottom: 2px #d40005 solid;
+    text-align: center;
+    width: 25rem;
+    padding-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10vw;
+}
+.servicecard{
+    margin-bottom: 5vw;
+    height: 700px;
+    width: 400px;
+    background-color: #1e1e1e;
+    box-shadow: 5px 5px #d4000485;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.servicecard .textcontainer h3{
+    color:aliceblue;
+    font-family: 'Krona One', sans-serif;
+    font-size: 30px;
+    border-bottom: 2px #d40005 solid;
+    width: 70%;
+    text-align: center;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+.servicecard .textcontainer p{
+    color:aliceblue;
+    font-family: 'Krona One', sans-serif;
+    font-size: 18px;
+    text-align: start;
+    width: 85%;
+}
+.servicecard .textcontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.servicecard .imgcontainer img{
+    width: 100%;
+    margin-bottom: 1vw;
+}
+.servicecard .btn-servicecard{
+    position: relative;
+    padding: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+

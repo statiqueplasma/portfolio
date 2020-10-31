@@ -24,12 +24,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'h@-(7+s1@ml9r+j04%3hdyi$o110cgay30+n8ejiwmyp9!qugs'
+with open('..\secret_key.txt') as f:
+    SECRET_KEY = f.read().strip()
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'statiqueplasma.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'statiqueplasma.herokuapp.com', 'statiqueplasma.com', 'www.statiqueplasma.com']
 
 
 # Application definition
@@ -110,6 +111,9 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE =True
+SECURE_SSL_REDIRECT = True
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
