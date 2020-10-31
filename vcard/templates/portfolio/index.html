@@ -1,0 +1,52 @@
+{% extends 'base2.html' %}
+{% load static %}
+{% block content%}
+<section class="descript">
+
+    <div class="col-sm-12 col-md-6 middle-md">
+        <div class="hello box">
+            <h3>-- Inovation & Creativity --</h3>
+            <p>Hey there, I'm HAITAM AOUAD IDRISSI, An Inovatif and Creatif Engeneer, Welcome to My Portfolio</p>
+            <a style="font-size: large; font-family: 'Krona One', sans-serif;margin-left: 200px; margin-top: 15px; padding: 15px;;" href="#" class="btn btn-primary btn-lg" role="button" aria-pressed="true">Contact Me</a>
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-6">
+        <img  class="box" id="portraitHome" src="{% static 'vcard/img/portrait_edited.png' %}" alt="">
+    </div>
+    
+</section>
+<section class="clarification">
+    <div class="row">
+        <div class="col-sm-12 col-md-6 question">
+            <h1>
+                What do I Mean By Creativity <span style="color: #d40005; font-weight: bold;">!</span>
+            </h1>
+        </div>
+        <div class="col-sm-12 col-md-6 answere">
+            <p >In a world where Technologies Are becoming harder and harder to Develop, Using your Creativity can be a Key to Create a Breakthrough in the Market,
+                And there is no better exemple to that, than <b><i><span style="color: #d40005; font-weight: bold;">"</span>Steve Jobs<span style="color: #d40005; font-weight: bold;">"</span></i></b> with his <b><i><span style="color: #d40005; font-weight: bold;">"</span>IPOD<span style="color: #d40005; font-weight: bold;">"</span></i></b>
+            </p>
+        </div>
+    </div>
+</section>
+<section class="services">
+    <h1 class="section-title"><span style="color: #d40005; font-weight: bold;">&lt;/</span> Services <span style="color: #d40005; font-weight: bold;">&gt;</span></h1>
+    <div class="row cardcontainer">
+        {% for service in object_list %}
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <div class="servicecard">
+                    <div class="imgcontainer">
+                        <img src="{{service.picture.url}}" alt="">
+                    </div>
+                    <div class="textcontainer">
+                        <h3>{{service.name}}</h3>
+                        <p>{{service.snipet}}</p>
+                    </div>
+                    <hr style="height:2px;width:75%;color:#d40005;background-color:#d40005">
+                    <a style="font-size: large; font-family: 'Krona One', sans-serif;" href="{% url 'portfolio:services' service.id %}" class="btn btn-primary btn-lg btn-servicecard" role="button" aria-pressed="true">View More</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

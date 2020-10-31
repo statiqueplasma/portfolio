@@ -1,0 +1,166 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>V-Card &mdash; Haitam Aouad Idrissi</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900" rel="stylesheet">
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+  <link rel="stylesheet" href="{% static 'vcard/css/bootstrap.min.css'%}">
+  <link rel="stylesheet" href="{% static 'vcard/css/bootstrap.css'%}">
+  <link rel="stylesheet" href="{% static 'vcard/css/bootstrap-grid.min.css'%}">
+  <link rel="stylesheet" href="{% static 'vcard/css/bootstrap-grid.css'%}">
+  <link rel="stylesheet" href="{% static 'vcard/css/bootstrap-reboot.min.css'%}">
+  <link rel="stylesheet" href="{% static 'vcard/css/bootstrap-reboot.css'%}">
+  <link rel="stylesheet" href="{% static 'vcard/css/style.css'%}">
+  <link rel="shortcut icon" href="{% static 'vcard/img/favicon.ico'%}" type="image/x-icon" />
+
+  <div class="loader">        
+    <div class="logo">
+        <img src="{% static 'vcard/img/logo.png' %}" alt="">
+    </div>
+    <div class="bar">
+        <img src="{% static 'vcard/img/220.svg' %}" alt="">
+    </div>
+  </div>
+
+
+  <!-- <div class="navbar">
+    <img  class="navlogo" src="{% static 'vcard/img/header_big.png' %}" alt="StatiquePlasma">    
+    <ul class="navlist">
+        <li><a href="{% url 'portfolio:home' %}">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li>
+            <a href="#">Services</a>
+            <div class="dropdown">
+                <ul>
+                    {% for service in service_items %}
+                    <li><a href="{% url 'portfolio:services' service.id %}">{{service.name}}</a></li>
+                    {% endfor %}
+                    <li>test</li>
+                </ul>
+            </div>
+        </li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">V-Card</a></li>
+    </ul>
+</div> -->
+
+<!--<div class="menu-mobile">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+
+</div>-->
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <input type="checkbox" name="" id="check">
+            
+            <div class="logo-container">
+                <img  class="navlogo" src="{% static 'vcard/img/header_big.png' %}" alt="StatiquePlasma">
+            </div>
+
+            <div class="nav-btn">
+                <div class="empty"></div>
+                <div class="nav-links">
+                    <ul>
+                        <li class="nav-link" style="--i: .6s">
+                            <a href="#">Home</a>
+                        </li>
+                        <li class="nav-link" style="--i: .85s">
+                            <a href="#">Menu<i class="fas fa-caret-down"></i></a>
+                            <div class="dropdown">
+                                <ul>
+                                    <li class="dropdown-link">
+                                        <a href="#">Link 1</a>
+                                    </li>
+                                    <li class="dropdown-link">
+                                        <a href="#">Link 2</a>
+                                    </li>
+                                    <li class="dropdown-link">
+                                        <a href="#">Link 3<i class="fas fa-caret-down"></i></a>
+                                    </li>
+                                    <li class="dropdown-link">
+                                        <a href="#">Link 4</a>
+                                    </li>
+                                    <div class="arrow"></div>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-link" style="--i: 1.1s">
+                            <a href="#">Services<i class="fas fa-caret-down"></i></a>
+                            <div class="dropdown">
+                                <ul>
+                                    <li class="dropdown-link">
+                                        <a href="#">Link 1</a>
+                                    </li>
+                                    <li class="dropdown-link">
+                                        <a href="#">Link 2</a>
+                                    </li>
+                                    <li class="dropdown-link">
+                                        <a href="#">Link 3<i class="fas fa-caret-down"></i></a>
+                                        <div class="dropdown second">
+                                            <ul>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Link 1</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Link 2</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Link 3</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">More<i class="fas fa-caret-down"></i></a>
+                                                </li>
+                                                <div class="arrow"></div>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <div class="arrow"></div>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-link" style="--i: 1.35s">
+                            <a href="#">About</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="hamburger-menu-container">
+                <div class="hamburger-menu">
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    {% block content%}
+    
+    {% endblock %}
+</body>
+
+<footer>
+  <script>
+    $(window).on("load",function(){
+        $(".loader").fadeOut("slow");
+    });
+    window.addEventListener("scroll", function(){
+        var navbar = document.querySelector("header");
+        navbar.classList.toggle("navscroll", window.scrollY > 200);
+    })
+</script>
+</footer>
+
+</html>

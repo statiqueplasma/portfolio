@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900" rel="stylesheet">
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
   <link rel="stylesheet" href="{% static 'vcard/css/bootstrap.min.css'%}">
   <link rel="stylesheet" href="{% static 'vcard/css/bootstrap.css'%}">
   <link rel="stylesheet" href="{% static 'vcard/css/bootstrap-grid.min.css'%}">
@@ -18,15 +19,27 @@
   <link rel="stylesheet" href="{% static 'vcard/css/style.css'%}">
   <link rel="shortcut icon" href="{% static 'vcard/img/favicon.ico'%}" type="image/x-icon" />
 </head>
-
+<div class="loader">        
+  <div class="logo">
+      <img src="{% static 'vcard/img/logo.png' %}" alt="">
+  </div>
+  <div class="bar">
+      <img src="{% static 'vcard/img/220.svg' %}" alt="">
+  </div>
+</div>
 <body>
+  
     {% block content%}
     
     {% endblock %}
 </body>
 
 <footer>
-
+  <script>
+    $(window).on("load",function(){
+        $(".loader").fadeOut("slow");
+    });
+</script>
 </footer>
 
 </html>
