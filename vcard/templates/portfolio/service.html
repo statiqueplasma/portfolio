@@ -1,10 +1,85 @@
 {% extends 'base2.html' %}
 {% load static %}
 {% block title%}
-Services &mdash; {{services.name}}
+Services &mdash; {{service.name}}
 {% endblock %}
 {% block content%}
+<section class="servicepage">
+    <h1><span style="color: #d40005; font-weight: bold;">&lt;/</span> {{service.name}} <span style="color: #d40005; font-weight: bold;">&gt;</span></h1>
+    <img style="float: right; margin: 6vw 10px 6vw 10px;"src="{{service.picture.url}}" alt="">
+    <p style="margin: 6vw 0;">{{service.description}}</p>
+    
+    {% if service.languages.all %}
+        <hr style="height:2px;width:75%;color:#d40005;background-color:#d40005; margin-left: auto; margin-right: auto; margin-top: 2vw; margin-bottom: 2vw;">
+        <div style="padding:2vw;" class="row middle-top center-xs">
+            <div class="col-xs-12 col-md-6">
+                <h2 style="padding: 0;">Languages & Frameworks:</h2>
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <ul>
+                    {% for language in service.languages.all %}
+                    <li> - {{language.name}}    <img style="width: 2rem;"src="{{language.logo.url}}" alt=""></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    {% endif %}
+    
+    {% if service.principles.all %}
+        <hr style="height:2px;width:75%;color:#d40005;background-color:#d40005; margin-left: auto; margin-right: auto; margin-top: 2vw; margin-bottom: 2vw;">
+        <h2>Subjectes:</h2>        
+        <div style="padding:2vw;" class="row middle-top center-xs">
+            {% for subject in service.principles.all %}
+            <div class="col-xs-12 col-md-6">
+                <h2>{{subject.name}}</h2>
+            </div>
+            <div class="col-xs-12 col-md-6">
+               <p>{{subject.description}}</p>
+            </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+    {% if service.softwars.all %}
+        <hr style="height:2px;width:75%;color:#d40005;background-color:#d40005; margin-left: auto; margin-right: auto; margin-top: 2vw; margin-bottom: 2vw;">
+        <div style="padding:2vw;" class="row middle-top center-xs">
+            <div class="col-xs-12 col-md-6">
+                <h2 style="padding: 0;">softwares:</h2>
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <ul>
+                    {% for softwar in service.softwars.all %}
+                    <li> - {{softwar.name}}    <img style="width: 2rem;"src="{{softwar.logo.url}}" alt=""></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    {% endif %}
+    {% if service.certificats.all%}        
+        <hr style="height:2px;width:75%;color:#d40005;background-color:#d40005; margin-left: auto; margin-right: auto; margin-top: 2vw; margin-bottom: 2vw;">
+        <h2>Certificates:</h2>        
+        <div style="padding:2vw;" class="row middle-top center-xs certificate">
+            {% for certificat in service.certificats.all %}
+            <div class="col-xs">
+                <h2>Title:</h2>
+                <p>{{certificat.titre}}</p>
+                <h2>School:</h2>
+                <p>{{certificat.school}}</p>
+                <h2>description:</h2>
+                <p style="font-size: 1.2rem;">{{certificat.description}}</p>
+            </div>
+            {% if certificat.picture %}
+            <div id="overlay" class="overlay" style="text-align: center;"
+                onclick="document.getElementById('overlay').style.display = 'none';" >
+                <img style="width:70%;margin-top: 50px; border:3px solid black;" src="{{certificat.picture.url}}">
+            </div>
+            <div class="col-xs-12 col-md-6 certificatpic">
+                <img style="width: 100%;"src="{{certificat.picture.url}}" alt="" onclick="document.getElementById('overlay').style.display = 'block';">
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+    {% endif %}
+    
+</section>
 
-<h1>{{services.name}}</h1>
-text here
 {% endblock %}
